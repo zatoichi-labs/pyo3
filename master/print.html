@@ -3975,8 +3975,8 @@ and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semanti
 <li>Add <code>PyAny::is_instance()</code> method. <a href="https://github.com/PyO3/pyo3/pull/1276">#1276</a></li>
 <li>Add support for conversion between <code>char</code> and <code>PyString</code>. <a href="https://github.com/PyO3/pyo3/pull/1282">#1282</a></li>
 <li>Add FFI definitions for <code>PyBuffer_SizeFromFormat</code>, <code>PyObject_LengthHint</code>, <code>PyObject_CallNoArgs</code>, <code>PyObject_CallOneArg</code>, <code>PyObject_CallMethodNoArgs</code>, <code>PyObject_CallMethodOneArg</code>, <code>PyObject_VectorcallDict</code>, and <code>PyObject_VectorcallMethod</code>. <a href="https://github.com/PyO3/pyo3/pull/1287">#1287</a></li>
-<li>Allow the use of a string literal in <code>#[pyclass(name = &quot;string literal&quot;)]</code>. <a href="https://github.com/PyO3/pyo3/pull/1295">#1295</a></li>
 <li>Add section about Python::check_signals to the FAQ page of the user guide. <a href="https://github.com/PyO3/pyo3/pull/1301">#1301</a></li>
+<li>Add conversions between u128/i128 and PyLong for PyPy. <a href="https://github.com/PyO3/pyo3/pull/1310">#1310</a></li>
 </ul>
 <h3><a class="header" href="#changed" id="changed">Changed</a></h3>
 <ul>
@@ -3989,6 +3989,7 @@ and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semanti
 <li>Rename <code>PyTypeInfo::is_instance</code> and <code>PyTypeInfo::is_exact_instance</code> to <code>PyTypeInfo::is_type_of</code> and <code>PyTypeInfo::is_exact_type_of</code>. <a href="https://github.com/PyO3/pyo3/pull/1278">#1278</a></li>
 <li>Optimize <code>PyAny::call0</code>, <code>Py::call0</code> and <code>PyAny::call_method0</code> and <code>Py::call_method0</code> on Python 3.9 and up. <a href="https://github.com/PyO3/pyo3/pull/1285">#1287</a></li>
 <li>Deprecate <code>Python::is_instance</code>, <code>Python::is_subclass</code>, <code>Python::release</code>, and <code>Python::xdecref</code>. <a href="https://github.com/PyO3/pyo3/pull/1292">#1292</a></li>
+<li>Require double-quotes for pyclass name argument e.g <code>#[pyclass(name = &quot;MyClass&quot;)]</code>. <a href="https://github.com/PyO3/pyo3/pull/1303">#1303</a></li>
 </ul>
 <h3><a class="header" href="#removed" id="removed">Removed</a></h3>
 <ul>
@@ -4002,6 +4003,7 @@ and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semanti
 <li>Fix <code>#[text_signature]</code> interacting badly with rust <code>r#raw_identifiers</code>. <a href="https://github.com/PyO3/pyo3/pull/1286">#1286</a></li>
 <li>Fix FFI definitions for <code>PyObject_Vectorcall</code> and <code>PyVectorcall_Call</code>. <a href="https://github.com/PyO3/pyo3/pull/1285">#1287</a></li>
 <li>Fix building with Anaconda python inside a virtualenv. <a href="https://github.com/PyO3/pyo3/pull/1290">#1290</a></li>
+<li>Fix definition of opaque FFI types. <a href="https://github.com/PyO3/pyo3/pull/1312">#1312</a></li>
 </ul>
 <h2><a class="header" href="#a-hrefhttpsgithubcompyo3pyo3comparev0123v01240124a---2020-11-28" id="a-hrefhttpsgithubcompyo3pyo3comparev0123v01240124a---2020-11-28"><a href="https://github.com/pyo3/pyo3/compare/v0.12.3...v0.12.4">0.12.4</a> - 2020-11-28</a></h2>
 <h3><a class="header" href="#fixed-1" id="fixed-1">Fixed</a></h3>
